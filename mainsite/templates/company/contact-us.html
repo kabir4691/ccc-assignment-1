@@ -1,0 +1,19 @@
+{% extends 'company/base.html' %}
+
+{% block content %}
+
+<form method="POST" action="/contact-us-submit/" class="container-sm pt-3">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="contact-us-email">Email address</label>
+    <input type="email" class="form-control" id="contact-us-email">
+    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="contact-us-password">Password</label>
+    <input type="password" class="form-control" id="contact-us-password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
